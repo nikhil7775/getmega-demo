@@ -1,0 +1,45 @@
+.home-main-div{
+  padding: 100px 40px 40px;
+
+  .main-title{
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .all-comp-title{
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 30px 0 20px;
+  }
+
+  .share-div{
+    padding: 50px 0 150px;
+
+
+    .country-title{
+      text-align: center;
+      font-size: 18px;
+      margin: 15px auto 20px;
+    }
+  }
+
+  .details-div{
+    font-size: 18px;
+    text-align: left;
+
+    .details-sub-title{
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .links-div{
+      padding-left: 10px;
+    }
+
+    .link-item{
+      padding: 5px;
+      width: 100px;
+    }
+  }
+}

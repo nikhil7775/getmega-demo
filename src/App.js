@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import './App.scss';
+import 'antd/dist/antd.css';
+import AppRoutes from './AppRoutes';
+import { getAccountName } from './utils/authService';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* re-renders the routes so that after login it will redirect to home */}
+      <Fragment key={getAccountName()}>
+        <Switch>
+          {AppRoutes.map((route) => (route.isPrivate
+            ? (
+              <Route
+                key={route.path}
+                {...route}
+              />
+            )
+            : <Route key={route.path} {...route} />))}
+        </Switch>
+      </Fragment>
     </div>
   );
 }
