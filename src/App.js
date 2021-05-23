@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 import 'antd/dist/antd.css';
-import AppRoutes from './AppRoutes';
+import AppRoutes, { PrivateRoute } from './AppRoutes';
 import { getAccountName } from './utils/authService';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Switch>
           {AppRoutes.map((route) => (route.isPrivate
             ? (
-              <Route
+              <PrivateRoute
                 key={route.path}
                 {...route}
               />

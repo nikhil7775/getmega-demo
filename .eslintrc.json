@@ -25,7 +25,6 @@
         "react/state-in-constructor": 0,
         "react/static-property-placement": 0,
         "react/forbid-prop-types": 0,
-        "import/no-extraneous-dependencies": 0,
-        "no-console": 0
+        "import/no-extraneous-dependencies": 0
     }
 }

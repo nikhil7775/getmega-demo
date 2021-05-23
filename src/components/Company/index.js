@@ -28,7 +28,7 @@ class Company extends Component {
   }
 
   fetchData = async (company) => {
-    const response = firestore.collection('revenue1').doc(company);
+    const response = firestore.collection('revenue').doc(company);
     this.setState({ loading: true });
     const resp = await response.get();
     if (resp.exists) {
@@ -75,6 +75,7 @@ class Company extends Component {
                 columns={COLUMNS}
                 loading={loading}
                 pagination={false}
+                scroll={{ x: '100%' }}
               />
               )}
             </div>

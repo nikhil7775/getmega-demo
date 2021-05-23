@@ -59,22 +59,22 @@ class Home extends Component {
         <div className="main-title">Revenue Dashboard</div>
         <div className="share-div">
           <div className="all-comp-title">Market Share in Top Countries:</div>
-          <div className="display-flex">
-            <div className="width-33">
+          <div className="cards-div">
+            <div>
               <div className="country-title">
                 <span className="custom-link" role="presentation" onClick={() => this.goToCountry('India')}>India</span>
               </div>
               {loading ? <div>loading...</div>
                 : (data.length > 0 && <PieChart country="India" data={getCountryData(data, 'India')} />)}
             </div>
-            <div className="width-33">
+            <div>
               <div className="country-title">
                 <span className="custom-link" role="presentation" onClick={() => this.goToCountry('USA')}>USA</span>
               </div>
               {loading ? <div>loading...</div>
                 : (data.length > 0 && <PieChart country="USA" data={getCountryData(data, 'USA')} />)}
             </div>
-            <div className="width-33">
+            <div>
               <div className="country-title">
                 <span className="custom-link" role="presentation" onClick={() => this.goToCountry('UK')}>UK</span>
               </div>

@@ -60,6 +60,9 @@ class RevenueGraph extends React.Component {
       chart.legend.valueLabels.template.textAlign = 'end';
       chart.legend.itemContainers.template.tooltipText = '{legendSettings.labelText}';
       chart.legend.maxHeight = 72;
+      chart.legend.scrollable = true;
+
+      chart.responsive.enabled = true;
 
       chart.cursor = new am4charts.XYCursor();
       chart.cursor.maxTooltipDistance = -1;
@@ -72,7 +75,7 @@ class RevenueGraph extends React.Component {
 
     render() {
       return (
-        <div id="revenue-graph" style={{ width: '100%', height: '600px' }} />
+        <div id="revenue-graph" className="revenue-graph-div" />
       );
     }
 }

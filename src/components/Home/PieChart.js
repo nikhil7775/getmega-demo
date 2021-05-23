@@ -61,13 +61,15 @@ class PieChart extends React.Component {
 
     chart.hiddenState.properties.radius = am4core.percent(0);
 
+    chart.responsive.enabled = true;
+
     this.chart = chart;
   }
 
   render() {
     const { country } = this.props;
     return (
-      <div id={`pie-graph-${country}`} style={{ width: '90%', height: '250px' }} />
+      <div id={`pie-graph-${country}`} className="pie-chart-div" />
     );
   }
 }

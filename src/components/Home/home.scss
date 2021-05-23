@@ -34,6 +34,7 @@
     }
 
     .links-div{
+      flex-wrap: wrap;
       padding-left: 10px;
     }
 
@@ -41,5 +42,11 @@
       padding: 5px;
       width: 100px;
     }
+  }
+
+  .cards-div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }

@@ -16,7 +16,6 @@ class Login extends Component {
   login = async () => {
     const { user, credential } = await signInWithGoogle();
     const { history } = this.props;
-    console.log(user, credential);
     logLoginEvent(user.uid);
     storeUserData(user);
     storeToken(credential);

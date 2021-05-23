@@ -27,7 +27,7 @@ class Country extends Component {
   }
 
   fetchData = async (country) => {
-    const response = firestore.collection('revenue1');
+    const response = firestore.collection('revenue');
     this.setState({ loading: true });
     const resp = await response.get();
     const data = [];
@@ -74,6 +74,7 @@ class Country extends Component {
                 columns={COUNTRY_COLUMNS}
                 loading={loading}
                 pagination={false}
+                scroll={{ x: '100%' }}
               />
             </div>
             <div>
